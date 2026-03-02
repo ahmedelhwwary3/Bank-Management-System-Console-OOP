@@ -1,5 +1,5 @@
 
-# 🏦 Bank System Console App (C++ OOP Project)
+# 🏦 Bank Management System – C++ Console Application (OOP Design)  
 
 A clean, modular, and fully object-oriented C++ console application that simulates core functionalities of a simple banking system — entirely built without using any external libraries.
 
@@ -104,4 +104,5 @@ Feel free to contribute, suggest features, or report bugs.
 
 Telegram Channel For Projects:
 https://t.me/ahmedelhwwary3
+
 
