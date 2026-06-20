@@ -1,57 +1,66 @@
+# 🏦 Bank Management System – C++ Console Application (OOP Design)
 
-# 🏦 Bank Management System – C++ Console Application (OOP Design)  
-
-A clean, modular, and fully object-oriented C++ console application that simulates core functionalities of a simple banking system — entirely built without using any external libraries.
+A clean, modular, and fully object-oriented C++ console application that simulates core banking operations without relying on external libraries or databases.
 
 ---
 
 ## 📌 Features
 
 ### 🔐 User Management
-- Add / Edit / Delete / Search Users
-- Case-insensitive username handling
-- Login system with maximum 3 failed attempts
-- Bitwise permission system using `byte` flags
-- Role-based screen access via inheritance
-- Login activity reports
+
+* Add, Edit, Delete, and Search Users
+* Case-insensitive username handling
+* Authentication with account lockout after 3 failed attempts
+* Bitwise permission system using `byte` flags
+* Role-based screen authorization through inheritance
+* Login activity tracking
 
 ### 👥 Client Management
-- Add / Edit / Delete / Search clients
-- Display all clients in table view
-- Store data in text files (no database)
 
-### 💰 Bank Transactions
-- Deposit / Withdraw / Transfer between accounts
-- View balance for individual or all clients
-- Transaction history per client
+* Add, Edit, Delete, and Search Clients
+* Display all clients in tabular format
+* File-based persistence using text files
+
+### 💰 Banking Transactions
+
+* Deposit and Withdraw funds
+* Transfer money between accounts
+* View balances for individual or all clients
+* Transaction history per client
 
 ### 💱 Currency Conversion
-- Manage currencies and update exchange rates
-- Calculate conversion between any two currencies using updated rates
+
+* Manage currencies and exchange rates
+* Convert between any two currencies using updated rates
 
 ---
 
-## 📂 Project Structure
+## 🏗 Architecture
 
-```
-/SimpleBank
+```text
+SimpleBank
 ├── Core
 │   ├── clsUser.cpp / .h
 │   ├── clsClient.cpp / .h
 │   ├── clsCurrency.cpp / .h
 │   └── clsBankClient.cpp / .h
+│
 ├── Screens
 │   ├── MainMenu.cpp
 │   ├── LoginScreen.cpp
 │   └── BankTransactionScreens/
-├── Globals
-│   └── GlobalVars.cpp / .h (e.g., CurrentUser)
+│
 ├── Helpers
 │   ├── clsString.cpp / .h
 │   ├── clsInputValidate.cpp / .h
 │   └── clsDate.cpp / .h
+│
+├── Globals
+│   └── GlobalVars.cpp / .h
+│
 ├── Data
-│   └── Text files to store users, clients, currencies
+│   └── Text files for users, clients, and currencies
+│
 └── main.cpp
 ```
 
@@ -59,50 +68,42 @@ A clean, modular, and fully object-oriented C++ console application that simulat
 
 ## ⚙️ Technical Highlights
 
-- Full OOP design using classes, inheritance, and encapsulation
-- All utility functions (e.g., string manipulation, validation, date parsing) are self-implemented
-- File-based persistence using `fstream`
-- Custom `split()` and `join()` logic with flexible separators
-- Bitwise operations for permissions (`bit & mask`)
-- Consistent screen layout and interface by inheriting from a base screen class
-- Clean and readable codebase (no code repetition)
+* Full OOP design using classes, inheritance, and encapsulation
+* Self-implemented utility classes for strings, validation, and date handling
+* File-based persistence using `fstream`
+* Custom `split()` and `join()` implementations
+* Bitwise permission management using masks
+* Reusable screen framework through inheritance
+* DRY-oriented implementation with reusable helper classes
+* Clean, readable, and maintainable codebase
 
 ---
 
 ## 🔧 Tools Used
 
-- Language: C++
-- Compiler: Any standard C++ compiler (g++, MSVC)
-- Platform: Windows / Linux Terminal
+* C++
+* STL
+* fstream
+* g++ / MSVC
 
 ---
 
 ## 📝 How to Run
 
 1. Clone the repository.
-2. Compile using your C++ compiler:
-   ```bash
-   g++ -std=c++17 -o SimpleBankApp *.cpp
-   ./SimpleBankApp
-   ```
-3. Follow the on-screen menu.
+
+2. Compile the project:
+
+```bash
+g++ -std=c++17 -o SimpleBankApp *.cpp
+```
+
+3. Run the application:
+
+```bash
+./SimpleBankApp
+```
+
+4. Follow the on-screen menus.
 
 ---
-
-## 📣 Author
-
-Developed with care and precision by [Ahmed Elhwwary].  
-Feel free to contribute, suggest features, or report bugs.
----
-
-## ✅ Future Enhancements (Optional)
-
-- Add transaction logs
-- Enhance UI with ncurses (Linux) or WinAPI (Windows)
-- Encrypt stored passwords
-- Add export to CSV or JSON
-
-Telegram Channel For Projects:
-https://t.me/ahmedelhwwary3
-
-
